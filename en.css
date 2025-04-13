@@ -1,137 +1,167 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Noto+Sans+JP:wght@300;400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Antonio&family=Noto+Sans+JP:wght@300;400;700&display=swap');
 
+/* 기본 설정 */
 body {
-    margin: 0;
-    background-color: #111;
-    color: #eee;
-    font-family: 'Helvetica Neue', sans-serif;
-    display: flex;
-    justify-content: center;
-  }
-  
-  .container {
-    width: 360px;
-    padding: 20px;
-    text-align: center;
-  }
-  
-  .logo {
-    font-size: 32px;
-    letter-spacing: 2px;
-    margin-bottom: 20px;
-  }
-  
-  .hero-image {
-    width: 100%;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
-  .menu .item {
-    display: flex;
-    justify-content: space-between;
-    padding: 10px 0;
-    border-bottom: 1px solid #333;
-    font-size: 16px;
-  }
+  margin: 0;
+  background-color: #111;
+  color: #eee;
+  font-family: 'Helvetica Neue', sans-serif;
+  display: flex;
+  justify-content: center;
+}
 
-  #men-menu {
-    margin-bottom: 50px;
-  }
+.container {
+  width: 360px;
+  padding: 20px;
+  text-align: center;
+}
 
-  .menu-title {
-    font-family: 'Antonio', sans-serif;
-    font-size: 40px;
-    letter-spacing: 2px;
-    color: #ccc;
-  }
-  
-  .menu .item {
-    font-family: 'Noto Sans JP', sans-serif;
-    font-size: 16px;
-    color: #eee;
-  }
+/* 로고 이미지 */
+.hero-image {
+  width: 100%;
+  border-radius: 4px;
+  cursor: pointer;
+  display: block;
+  margin: 0 auto 20px;
+}
 
-  .contact-section {
-    margin-top: 70px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 16px;
-    padding-left: 10px;
-  }
-  
-  .contact-link {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    text-decoration: none;
-    color: #ddd;
-    font-size: 16px;
-    font-family: 'Noto Sans JP', sans-serif;
-    transition: opacity 0.3s ease;
-  }
-  
-  .contact-link:hover {
-    opacity: 0.8;
-  }
-  
-  .icon {
-    width: 24px;
-    height: 24px;
-    object-fit: contain;
-  }
-  
-  .footer-content {
-    position: relative;
-    max-width: 360px;
-    margin: 100px auto 0;
-    text-align: center;
-  }
-  
-  .footer-content::before {
-    content: "";
-    position: absolute;
-    top: -20px;
-    left: 0;
-    width: 100%;
-    height: 1px;
-    background-color: rgba(255, 255, 255, 0.1);
-  }
-  
-  .footer-title {
-    font-family: 'Antonio', sans-serif;
-    font-size: 14px;
-    letter-spacing: 1px;
-    margin-bottom: 10px;
-    color: #ccc;
-  }
-  
-  .footer-address,
-  .footer-hours,
-  .footer-contact {
-    font-size: 12px;
-    color: #888;
-    margin-bottom: 8px;
-    line-height: 1.5;
-  }
-  
-  .footer-contact a.footer-link {
-    color: #888;
-    text-decoration: none;
-  }
-  
-  .footer-contact a.footer-link:hover {
-    color: #bbb;
-  }
-  
-  .footer-address a.footer-link {
-    color: #888;
-    text-decoration: none;
-  }
-  
-  .footer-address a.footer-link:hover {
-    color: #bbb;
-  }
-  
+/* MEN / WOMEN 제목 */
+.menu-title {
+  font-family: 'Antonio', sans-serif;
+  font-size: 40px;
+  letter-spacing: 2px;
+  color: #ccc;
+  text-align: center;
+  margin-top: 130px;
+}
+
+/* 중분류 (CUT, PERM 등) */
+.menu-section {
+  margin-bottom: 40px;
+  padding-top: 10px;
+}
+
+.menu-subtitle {
+  font-family: 'Antonio', sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+  margin: 40px 0 20px;
+  color: #fff;
+  border-left: 4px solid #888;
+  padding-left: 10px;
+  background-color: #1a1a1a;
+  padding-top: 6px;
+  padding-bottom: 6px;
+}
+
+/* 소분류 (실제 메뉴 항목들) */
+.menu {
+  text-align: left;
+}
+
+.menu .item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid #333;
+  font-size: 16px;
+  font-family: 'Noto Sans JP', sans-serif;
+  color: #eee;
+  transition: background-color 0.2s ease;
+}
+
+.menu .item:hover {
+  background-color: #1f1f1f;
+}
+
+.menu .item span:first-child {
+  text-align: left;
+  flex: 1;
+}
+
+.menu .item span:last-child {
+  text-align: right;
+  min-width: 80px;
+  font-weight: 400;
+  color: #ccc;
+}
+
+/* 연락처 영역 */
+.contact-section {
+  margin-top: 70px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  padding-left: 10px;
+}
+
+.contact-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: #ddd;
+  font-size: 16px;
+  font-family: 'Noto Sans JP', sans-serif;
+  transition: opacity 0.3s ease;
+}
+
+.contact-link:hover {
+  opacity: 0.8;
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+
+/* 푸터 */
+.footer-content {
+  position: relative;
+  max-width: 360px;
+  margin: 100px auto 0;
+  text-align: center;
+}
+
+.footer-content::before {
+  content: "";
+  position: absolute;
+  top: -20px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.footer-title {
+  font-family: 'Antonio', sans-serif;
+  font-size: 14px;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+  color: #ccc;
+}
+
+.footer-address,
+.footer-hours,
+.footer-contact {
+  font-size: 12px;
+  color: #888;
+  margin-bottom: 8px;
+  line-height: 1.5;
+}
+
+.footer-contact a.footer-link,
+.footer-address a.footer-link {
+  color: #888;
+  text-decoration: none;
+}
+
+.footer-contact a.footer-link:hover,
+.footer-address a.footer-link:hover {
+  color: #bbb;
+}
